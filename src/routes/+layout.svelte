@@ -9,7 +9,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="drawer">
+<div class="font-nunito drawer">
 	<input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content flex flex-col">
 		<!-- Navbar -->
@@ -41,7 +41,7 @@
 				</ul>
 			</nav>
 		</header>
-		<main class="p-4">
+		<main class="py-4 md:mx-auto">
 			{@render children?.()}
 		</main>
 	</div>
