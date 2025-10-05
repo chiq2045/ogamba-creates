@@ -1,4 +1,4 @@
-import { defineConfig } from 'tinacms';
+import { defineConfig, Form, TinaCMS } from 'tinacms';
 
 // Your hosting provider likely exposes this as an environment variable
 const branch =
@@ -28,22 +28,44 @@ export default defineConfig({
 			{
 				name: 'post',
 				label: 'Posts',
-				path: 'content/posts',
+				path: 'src/content/posts',
 				fields: [
 					{
 						type: 'string',
 						name: 'title',
 						label: 'Title',
 						isTitle: true,
-						required: true
+						required: true,
+						searchable: true
 					},
 					{
 						type: 'rich-text',
 						name: 'body',
 						label: 'Body',
 						isBody: true
+					},
+					{
+						type: 'rich-text',
+						name: 'summary',
+						label: 'Summary',
+						required: true
 					}
-				]
+				],
+				ui: {
+					beforeSubmit: async ({
+						values
+					}: {
+						form: Form;
+						cms: TinaCMS;
+						values: Record<string, any>;
+					}) => {
+						return {
+							...values,
+							createdAt: values.createdAt ?? new Date().toISOString(),
+							updatedAt: values.createdAt ? new Date().toISOString() : undefined
+						};
+					}
+				}
 			}
 		]
 	}

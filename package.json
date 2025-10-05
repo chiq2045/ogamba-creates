@@ -45,6 +45,9 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
+		"@friendofsvelte/mermaid": "^0.0.4",
+		"highlight.js": "^11.11.1",
+		"svelte-highlight": "^7.8.4",
 		"tinacms": "^2.8.3"
 	}
 }

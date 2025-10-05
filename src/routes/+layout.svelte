@@ -68,7 +68,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="font-nunito drawer bg-base-100">
+<div class="font-nunito drawer">
 	<input id="drawer" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content flex flex-col">
 		<header class="navbar w-full shadow-sm">
@@ -102,7 +102,7 @@
 	</div>
 	<div class="drawer-side">
 		<label for="drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-		<aside class="min-h-screen w-80 bg-base-100">
+		<aside class="min-h-screen w-80">
 			<div class="navbar shadow-sm">
 				<div class="mx-2 flex-1 px-2">Ogamba Creates</div>
 			</div>
