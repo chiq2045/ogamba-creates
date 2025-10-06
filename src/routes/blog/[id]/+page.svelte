@@ -3,7 +3,6 @@
 	import TinaMarkdown from '../tina-markdown.svelte';
 
 	let { data }: PageProps = $props();
-	$inspect(data.post.body);
 </script>
 
 <svelte:head>
