@@ -71,7 +71,7 @@
 <div class="font-nunito drawer">
 	<input id="drawer" type="checkbox" class="drawer-toggle" />
 	<div class="drawer-content flex flex-col">
-		<header class="navbar w-full shadow-sm">
+		<header class="navbar w-full shadow">
 			<div class="flex-none lg:hidden">
 				<label for="drawer" aria-label="open sidebar" class="btn btn-square btn-ghost">
 					<svg
